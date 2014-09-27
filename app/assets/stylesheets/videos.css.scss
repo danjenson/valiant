@@ -1,0 +1,156 @@
+// Place all the styles related to the Videos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fff;
+  background-color: hsla(180, 0, 10, 1);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0px 0px;
+  position: relative;
+}
+
+header {
+  margin: 0px 0px;
+  width: 100%;
+  height: 15%;
+  float: left;
+  clear: left;
+}
+
+nav {
+  display: inline-block;
+  text-align: center;
+  vertical-align: bottom;
+  width: 100%;
+  padding: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  float: left;
+  width: 33.33%;
+  line-height: 100%;
+  vertical-align: bottom;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}
+
+nav #search {
+  border-radius: 1px;
+  width: 100%;
+  height: 20px;
+  font-size: 12px;
+  border: 1px solid #fff;
+}
+
+nav button {
+  padding: 4px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: hsla(180, 0, 10, 1);
+}
+
+nav button:hover {
+  padding: 4px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #3CF;
+  background-color: hsla(180, 0, 5, 1);
+  border: 1px solid #fff;
+}
+
+#search-bar {
+}
+
+#upload-btn {
+}
+
+#tag-search-btn {
+}
+
+#title {
+  font-family: 'Playfair Display SC';
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+#content {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  width: 100%;
+  height: 78%;
+  float: left;
+  clear: left;
+  position: relative;
+}
+
+#close-overlay-btn {
+  border-radius: 100%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: hsla(180, 0, 5, 1);
+  display: none;
+  z-index: 6;
+}
+
+#map-canvas {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.map-overlay {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(180, 0, 10, 0.9);
+  position: absolute;
+  z-index: 5;
+}
+
+#video-canvas {
+  text-align: center;
+}
+
+#video-player {
+  margin: auto;
+  padding: auto;
+}
+
+#upload-form {
+}
+
+#tag-search {
+}
+
+footer {
+  margin: 0px 0px;
+  width: 100%;
+  height: 7%;
+  float: left;
+  clear: left;
+  text-align: center;
+}
+
+footer p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}

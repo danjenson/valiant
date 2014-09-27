@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Playfair Display SC';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display SC'),
+       local('PlayfairDisplaySC-Regular'),
+       url(http://fonts.gstatic.com/s/playfairdisplaysc/v4/G0-tvBxd4eQRdwFKB8dRkXMiQ8bx8R67TKBblDxZ-bQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display SC';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Playfair Display SC Bold'),
+       local('PlayfairDisplaySC-Bold'),
+       url(http://fonts.gstatic.com/s/playfairdisplaysc/v4/5ggqGkvWJU_TtW2W8cEubJ5MIzPNHtabfW1fmwMw36M.ttf) format('truetype');
+}

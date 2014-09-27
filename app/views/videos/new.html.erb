@@ -1,0 +1,21 @@
+<h1>New video</h1>
+
+<%= form_tag(@aws_post_url, id: 'file_upload', method:'post',
+             remote: true, multipart: true, multiple: false,
+             enforce_utf8: false) do %>
+
+  <%= hidden_field_tag 'key' %>
+  <%= hidden_field_tag 'AWSAccessKeyId', @aws_access_key_id %>
+  <%= hidden_field_tag 'acl', 'public-read' %>
+  <%= hidden_field_tag 'success_action_status', '200' %>
+  <%= hidden_field_tag 'policy' %>
+  <%= hidden_field_tag 'signature' %>
+  <label for='file'>Upload Video
+    <%= file_field_tag 'file', class: 'file-upload' %>
+  </label>
+
+<% end %>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', videos_path %>

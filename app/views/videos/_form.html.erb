@@ -1,0 +1,40 @@
+<%= javascript_include_tag 'jquery-ui.min' %>
+<%= javascript_include_tag 'jquery.iframe-transport' %>
+<%= javascript_include_tag 'jquery.fileupload' %>
+<%= javascript_include_tag 'upload' %>
+<%= form_for(@video, html: { id: 'video_record' } ) do |f| %>
+  <% if @video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@video.errors.count, "error") %>
+        prohibited this video from being saved:
+      </h2>
+
+      <ul>
+      <% @video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :recorded_at %><br>
+    <%= f.datetime_select :recorded_at %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :lng %>
+  </div>
+  <%= f.hidden_field :s3_key %>
+  <div class="actions">
+  <%= f.submit %>
+  </div>
+<% end %>

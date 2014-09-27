@@ -1,0 +1,3 @@
+== README
+
+This is Valiant News source. Go fork and prosper.

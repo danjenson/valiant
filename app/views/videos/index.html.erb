@@ -1,0 +1,42 @@
+<%= javascript_include_tag 'gmap_api', 'data-turbolinks-track' => false %>
+<%= javascript_include_tag 'gmap', 'data-turbolinks-track' => false %>
+<%= javascript_include_tag 'overlay', 'data-turbolinks-track' => false %>
+<%= javascript_include_tag 'html5_video' %>
+
+<header>
+  <h1 id="title">Valiant</h1>
+  <nav>
+    <ul>
+      <li><button class="map-overlay-trigger" id="upload-btn" type="button">Upload</button></li>
+      <li><input id="search" type="text" value="San Francisco, CA"></li>
+      <li><button class="map-overlay-trigger" id="tag-search-btn" type="button">Filter #</button></li>
+    </ul>
+  </nav>
+</header>
+<section id="content">
+  <%= hidden_field_tag :aws_s3_url, @aws_s3_url %>
+  <button id="close-overlay-btn" display="none">X</button>
+  <div id="map-canvas">
+  </div>
+  <div class="map-overlay" id="video-canvas" style="display: none">
+    <video id="video-player" class="video-js vjs-default-skin" controls preload="auto">
+      <source src="" type='video/mp4'>
+      <p class="vjs-no-js">
+       To view this video please enable JavaScript,
+       and consider upgrading to a web browser that
+        <a href="http://videojs.com/html5-video-support/"
+           target="_blank">supports HTML5 video
+        </a>
+      </p>
+    </video>
+  </div>
+  <div class="map-overlay" id="upload-form" style="display: none">
+    <%= render 'upload' %>
+  </div>
+  <div class="map-overlay" id="tag-search" style="display: none">
+    <%# <%= render 'filter' %1> %>
+  </div>
+</section>
+<footer>
+  <p>News for the People, by the People.</p>
+</footer>

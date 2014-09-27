@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<%= javascript_include_tag 'html5_video' %>
+
+<video id="<%= @video.s3_key %>"  class="video-js vjs-default-skin"
+  controls preload="auto" width="640" height="264" >
+  <source src="<%= @aws_s3_url + '/' + @video.s3_key %>" type='video/mp4' />
+  <p class="vjs-no-js">
+   To view this video please enable JavaScript,
+   and consider upgrading to a web browser that
+    <a href="http://videojs.com/html5-video-support/"
+       target="_blank">supports HTML5 video
+    </a>
+  </p>
+</video>
+
+<p>
+  <strong>Title:</strong>
+  <%= @video.title %>
+</p>
+
+<p>
+  <strong>Recorded at:</strong>
+  <%= @video.recorded_at %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @video.lat %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @video.lng %>
+</p>
+
+<p>
+  <strong>Hash Tags:</strong>
+  <% @video.hash_tags.each do |tag| %>
+    <%= tag.name %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Direct Link:</strong>
+  <%= link_to @video.s3_key, @aws_s3_url + '/' + @video.s3_key %>
+</p>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
