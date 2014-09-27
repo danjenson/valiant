@@ -4,7 +4,7 @@ class Video < ActiveRecord::Base
   validates :lat, numericality: true
   validates :lng, numericality: true
 
-  scope :geosearch, -> (lat_low, lat_up, lng_low, long_up) {
+  scope :geosearch, -> (lat_low, lat_up, lng_low, lng_up) {
     where("lat > ? AND lat < ? AND lng > ? AND lng < ?",
           lat_low, lat_up, lng_low, lng_up).includes(:hash_tags)
   }
